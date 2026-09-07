@@ -1,5 +1,6 @@
 import './globals.css';
 import Link from 'next/link';
+import ScrollToTop from '@/components/scroll-to-top';
 export const metadata = {
   title: { default: '태현의 기술 블로그', template: '%s | 태현의 기술 블로그' },
   description: '개발 및 기록을 위한 공간입니다.',
@@ -13,5 +14,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </div></header>
     {children}
     <footer className="container site-footer"><span>© {new Date().getFullYear()} 태현 · 배움의 순간을 기록합니다.</span><span>Built with curiosity & Next.js</span></footer>
+    <ScrollToTop />
   </body></html>;
 }
