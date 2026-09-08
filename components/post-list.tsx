@@ -9,7 +9,7 @@ export default function PostList({ posts }: { posts: Omit<Post, 'content'>[] }) 
   const filtered = posts.filter(post => (!tag || post.tags.includes(tag)) &&
     `${post.title} ${post.description} ${post.tags.join(' ')}`.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()));
   return <section id="posts" className="posts-section">
-    <div className="section-heading"><div><div className="eyebrow">THE JOURNAL</div><h2>개발 기록 <span>{String(posts.length).padStart(2, '0')}</span></h2></div>
+    <div className="section-heading"><div><div className="eyebrow">THE POST</div><h2>게시글 <span>{String(posts.length).padStart(2, '0')}</span></h2></div>
       <label className="search"><span aria-hidden="true">⌕</span><span className="sr-only">글 제목, 요약, 태그 검색</span><input type="search" placeholder="어떤 기록을 찾고 있나요?" value={query} onChange={event => setQuery(event.target.value)} /></label>
     </div>
     <div className="filters" aria-label="태그 필터"><button aria-pressed={tag === null} onClick={() => setTag(null)}>전체</button>{tags.map(item => <button key={item} aria-pressed={tag === item} onClick={() => setTag(item)}>{item}</button>)}</div>
