@@ -71,7 +71,7 @@ Todo List라는 서비스의 기능만 생각하면 다소 많은 기술을 사�
 
 이번 프로젝트에서 계획한 아키텍처를 단순화하면 다음과 같다.
 
-![image](../../public/images/todo-list-structure.svg)
+![할 일 목록 구조](/images/todo-list-structure.svg)
 
 React의 빌드 결과물은 Nginx가 제공하고, 브라우저에서 발생한 API 요청은 Nginx를 거쳐 Spring Boot로 전달하는 구조를 계획하고 있다.
 
