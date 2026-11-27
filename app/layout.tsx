@@ -7,7 +7,7 @@ export const metadata = {
   description: '개발 및 기록을 위한 공간입니다.',
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="ko"><body>
+  return <html lang="ko" data-scroll-behavior="smooth"><body>
     <a className="skip-link" href="#main">본문으로 바로가기</a>
     <header className="site-header"><div className="container header-inner">
       <Link href="/" className="brand"><span className="brand-icon" aria-hidden="true"><PixelIcon name="terminal" /></span>태현의 기술 블로그<span className="brand-dot">/</span></Link>
