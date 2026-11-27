@@ -1,5 +1,6 @@
 import './globals.css';
 import Link from 'next/link';
+import PixelIcon from '@/components/pixel-icon';
 import ScrollToTop from '@/components/scroll-to-top';
 export const metadata = {
   title: { default: '태현의 기술 블로그', template: '%s | 태현의 기술 블로그' },
@@ -9,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return <html lang="ko"><body>
     <a className="skip-link" href="#main">본문으로 바로가기</a>
     <header className="site-header"><div className="container header-inner">
-      <Link href="/" className="brand"><span className="brand-icon" aria-hidden="true">t.</span>태현의 기술 블로그<span className="brand-dot">/</span></Link>
+      <Link href="/" className="brand"><span className="brand-icon" aria-hidden="true"><PixelIcon name="terminal" /></span>태현의 기술 블로그<span className="brand-dot">/</span></Link>
       <nav aria-label="메인 메뉴"><Link href="/#posts">글 목록</Link><Link href="/about">소개</Link><a href="https://github.com/manimani10002" target="_blank" rel="noreferrer">GitHub ↗<span className="sr-only"> (새 탭)</span></a></nav>
     </div></header>
     {children}
